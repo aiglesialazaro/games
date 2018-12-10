@@ -1,2 +1,105 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<groups/>
+<groups>
+    <group eventID="2" id="0">
+        <draw comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <draw-text comment="false" x="26" y="40">
+                    <get-game-val-0 comment="false" id="0" x="0" y="0"/>
+                    <int id="1" val="27"/>
+                    <int id="2" val="38"/>
+                </draw-text>
+                <draw-text comment="false" x="26" y="65">
+                    <int id="0" val="x"/>
+                    <int id="1" val="6"/>
+                    <int id="2" val="38"/>
+                </draw-text>
+                <image-inst-hud comment="false" x="26" y="85">
+                    <image-inst-create comment="false" id="0" x="0" y="0">
+                        <get-val-2-2 comment="false" id="0" x="0" y="0"/>
+                    </image-inst-create>
+                    <int id="1" val="0"/>
+                    <int id="2" val="38"/>
+                </image-inst-hud>
+            </group>
+        </draw>
+    </group>
+    <group eventID="2" id="1">
+        <image-inst-layer2 comment="false" x="298" y="437">
+            <int id="0" val=""/>
+            <int id="1" val="0"/>
+            <int id="2" val=""/>
+            <int id="3" val=""/>
+            <int id="4" val=""/>
+            <int id="5" val="0"/>
+        </image-inst-layer2>
+    </group>
+    <group eventID="2" id="2">
+        <image-set-props0 comment="false" x="535" y="603">
+            <int id="0" val="0"/>
+            <int id="1" val=""/>
+            <int id="2" val="0"/>
+        </image-set-props0>
+        <image-set-props0 comment="false" x="535" y="630">
+            <int id="0" val="1"/>
+            <image-inst-create comment="false" id="1" x="0" y="0">
+                <get-val-2-2 comment="false" id="0" x="0" y="0"/>
+            </image-inst-create>
+            <int id="2" val="38"/>
+        </image-set-props0>
+    </group>
+    <group eventID="2" id="3">
+        <image-inst-hud comment="false" x="177" y="356">
+            <image-inst-create comment="false" id="0" x="0" y="0">
+                <image-file comment="false" id="0" x="0" y="0">
+                    <int id="0" val=""/>
+                </image-file>
+            </image-inst-create>
+            <int id="1" val="0"/>
+            <int id="2" val="38"/>
+        </image-inst-hud>
+    </group>
+    <group eventID="2" id="4">
+        <image-to-text comment="false" x="896" y="602">
+            <int id="0" val=""/>
+        </image-to-text>
+    </group>
+    <group eventID="2" id="-1">
+        <image-copy comment="false" x="886" y="248">
+            <int id="0" val=""/>
+        </image-copy>
+        <image-inst-create comment="false" x="562" y="568">
+            <get-val-2-2 comment="false" id="0" x="0" y="0"/>
+        </image-inst-create>
+        <image-actor comment="false" x="715" y="318">
+            <ACTOR eid="2" id="0"/>
+        </image-actor>
+        <image-actor comment="false" x="847" y="414">
+            <ACTOR eid="2" id="0"/>
+        </image-actor>
+        <image-copy comment="false" x="1012" y="201">
+            <int id="0" val=""/>
+        </image-copy>
+        <str-trim comment="false" x="843" y="508">
+            <image-to-text comment="false" id="0" x="0" y="0">
+                <int id="0" val=""/>
+            </image-to-text>
+        </str-trim>
+    </group>
+    <group eventID="3" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="3" id="-1">
+                <set-val-2-2 comment="false" x="26" y="40">
+                    <image-actor comment="false" id="0" x="0" y="0">
+                        <ACTOR eid="2" id="0"/>
+                    </image-actor>
+                </set-val-2-2>
+            </group>
+        </init>
+    </group>
+    <group eventID="3" id="1">
+        <image-to-text comment="false" x="240" y="174">
+            <int id="0" val=""/>
+        </image-to-text>
+    </group>
+    <group eventID="3" id="-1"/>
+</groups>

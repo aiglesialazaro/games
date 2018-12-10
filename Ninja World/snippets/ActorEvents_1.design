@@ -6,15 +6,115 @@
                 <set-xy comment="false" x="62" y="52">
                     <ACTOR eid="this" id="0"/>
                     <int id="1" val="0"/>
-                    <int id="2" val="41"/>
+                    <int id="2" val="66"/>
                 </set-xy>
                 <set-xy comment="false" x="62" y="79">
                     <ACTOR eid="this" id="0"/>
                     <int id="1" val="1"/>
-                    <int id="2" val="285"/>
+                    <int id="2" val="92"/>
                 </set-xy>
             </group>
         </init>
     </group>
+    <group eventID="1" id="1">
+        <scene-change-through comment="false" x="785" y="239">
+            <scene id="0"/>
+            <int id="1" val="0"/>
+            <int id="2" val=""/>
+        </scene-change-through>
+    </group>
     <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <event-collide-actortotype comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <set-game-val-0 comment="false" x="26" y="47">
+                    <plus comment="false" id="0" x="0" y="0">
+                        <get-game-val-0 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="1"/>
+                    </plus>
+                </set-game-val-0>
+                <die comment="false" x="26" y="77">
+                    <collide-actor-of-type comment="false" id="0" x="0" y="0"/>
+                </die>
+            </group>
+            <ACTOR eid="this" id="0"/>
+            <actortype eid="8" id="1"/>
+        </event-collide-actortotype>
+    </group>
+    <group eventID="2" id="-1"/>
+    <group eventID="3" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="3" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="3" id="-1">
+                        <say-this comment="false" x="37" y="78">
+                            <int id="0" val="Death"/>
+                        </say-this>
+                    </group>
+                    <more comment="false" id="0" x="0" y="0">
+                        <get-xy comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="1"/>
+                        </get-xy>
+                        <screen-wh comment="false" id="1" x="0" y="0">
+                            <int id="0" val="1"/>
+                        </screen-wh>
+                    </more>
+                </if>
+            </group>
+        </step>
+    </group>
+    <group eventID="3" id="1">
+        <if comment="false" x="78" y="165">
+            <group eventID="3" id="-1"/>
+            <more comment="false" id="0" x="0" y="0">
+                <get-xy comment="false" id="0" x="0" y="0">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="0"/>
+                </get-xy>
+                <screen-wh comment="false" id="1" x="0" y="0">
+                    <int id="0" val="0"/>
+                </screen-wh>
+            </more>
+        </if>
+    </group>
+    <group eventID="3" id="-1"/>
+    <group eventID="4" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="4" id="-1">
+                <scene-reload-through comment="false" x="26" y="40">
+                    <int id="0" val="0"/>
+                    <int id="1" val="1"/>
+                </scene-reload-through>
+                <set-game-val-0 comment="false" x="26" y="67">
+                    <minus comment="false" id="0" x="0" y="0">
+                        <get-game-val-0 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="1"/>
+                    </minus>
+                </set-game-val-0>
+                <if comment="false" x="26" y="97">
+                    <group eventID="4" id="-1">
+                        <set-game-val-0 comment="false" x="37" y="127">
+                            <int id="0" val="1"/>
+                        </set-game-val-0>
+                    </group>
+                    <less comment="false" id="0" x="0" y="0">
+                        <get-game-val-0 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="1"/>
+                    </less>
+                </if>
+            </group>
+            <int id="0" val="Death"/>
+        </event-custom>
+    </group>
+    <group eventID="4" id="-1"/>
+    <group eventID="5" id="0">
+        <event-actor-region comment="false" x="15" y="15">
+            <group eventID="5" id="-1"/>
+            <int id="0" val="0"/>
+            <REGION eid="this" id="1"/>
+            <ACTOR eid="this" id="2"/>
+        </event-actor-region>
+    </group>
+    <group eventID="5" id="-1"/>
 </groups>
