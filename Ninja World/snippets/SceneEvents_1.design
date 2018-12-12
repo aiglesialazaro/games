@@ -1,2 +1,39 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<groups/>
+<groups>
+    <group eventID="1" id="0">
+        <draw comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <draw-text comment="false" x="26" y="40">
+                    <get-game-val-0 comment="false" id="0" x="0" y="0"/>
+                    <int id="1" val="27"/>
+                    <int id="2" val="38"/>
+                </draw-text>
+                <draw-text comment="false" x="26" y="65">
+                    <int id="0" val="x"/>
+                    <int id="1" val="6"/>
+                    <int id="2" val="38"/>
+                </draw-text>
+                <image-inst-hud comment="false" x="26" y="85">
+                    <image-inst-create comment="false" id="0" x="0" y="0">
+                        <get-val-6-1 comment="false" id="0" x="0" y="0"/>
+                    </image-inst-create>
+                    <int id="1" val="0"/>
+                    <int id="2" val="38"/>
+                </image-inst-hud>
+            </group>
+        </draw>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <set-val-6-1 comment="false" x="26" y="40">
+                    <image-actor comment="false" id="0" x="0" y="0">
+                        <ACTOR eid="2" id="0"/>
+                    </image-actor>
+                </set-val-6-1>
+            </group>
+        </init>
+    </group>
+    <group eventID="2" id="-1"/>
+</groups>

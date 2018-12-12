@@ -3,12 +3,15 @@
     <group eventID="1" id="0">
         <init comment="false" x="51" y="27">
             <group eventID="1" id="-1">
-                <set-xy comment="false" x="62" y="52">
+                <set-game-val-1 comment="false" x="62" y="52">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </set-game-val-1>
+                <set-xy comment="false" x="62" y="77">
                     <ACTOR eid="this" id="0"/>
                     <int id="1" val="0"/>
                     <int id="2" val="66"/>
                 </set-xy>
-                <set-xy comment="false" x="62" y="79">
+                <set-xy comment="false" x="62" y="104">
                     <ACTOR eid="this" id="0"/>
                     <int id="1" val="1"/>
                     <int id="2" val="92"/>
@@ -22,6 +25,11 @@
             <int id="1" val="0"/>
             <int id="2" val=""/>
         </scene-change-through>
+    </group>
+    <group eventID="1" id="4">
+        <set-val-1-1 comment="false" x="449" y="70">
+            <int id="0" val=""/>
+        </set-val-1-1>
     </group>
     <group eventID="1" id="-1"/>
     <group eventID="2" id="0">
@@ -80,23 +88,28 @@
     </group>
     <group eventID="3" id="-1"/>
     <group eventID="4" id="0">
-        <event-custom comment="false" x="15" y="15">
+        <event-custom comment="false" x="71" y="27">
             <group eventID="4" id="-1">
-                <scene-reload-through comment="false" x="26" y="40">
-                    <int id="0" val="0"/>
-                    <int id="1" val="1"/>
-                </scene-reload-through>
-                <set-game-val-0 comment="false" x="26" y="67">
+                <set-game-val-0 comment="false" x="82" y="52">
                     <minus comment="false" id="0" x="0" y="0">
                         <get-game-val-0 comment="false" id="0" x="0" y="0"/>
                         <int id="1" val="1"/>
                     </minus>
                 </set-game-val-0>
-                <if comment="false" x="26" y="97">
+                <if comment="false" x="82" y="82">
                     <group eventID="4" id="-1">
-                        <set-game-val-0 comment="false" x="37" y="127">
+                        <set-game-val-0 comment="false" x="93" y="112">
                             <int id="0" val="1"/>
                         </set-game-val-0>
+                        <scene-change-color comment="false" x="93" y="132">
+                            <scene eid="0" id="0"/>
+                            <int id="1" val="0"/>
+                            <int id="2" val="1"/>
+                            <color b="0" g="0" id="3" r="0"/>
+                            <int id="4" val="0"/>
+                            <int id="5" val="1"/>
+                            <color b="0" g="0" id="6" r="0"/>
+                        </scene-change-color>
                     </group>
                     <less comment="false" id="0" x="0" y="0">
                         <get-game-val-0 comment="false" id="0" x="0" y="0"/>
@@ -107,14 +120,41 @@
             <int id="0" val="Death"/>
         </event-custom>
     </group>
-    <group eventID="4" id="-1"/>
-    <group eventID="5" id="0">
-        <event-actor-region comment="false" x="15" y="15">
-            <group eventID="5" id="-1"/>
-            <int id="0" val="0"/>
-            <REGION eid="this" id="1"/>
-            <ACTOR eid="this" id="2"/>
-        </event-actor-region>
+    <group eventID="4" id="2">
+        <scene-change-through comment="false" x="92" y="362">
+            <scene id="0"/>
+            <int id="1" val="0"/>
+            <int id="2" val="1"/>
+        </scene-change-through>
     </group>
-    <group eventID="5" id="-1"/>
+    <group eventID="4" id="-1"/>
+    <group eventID="6" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="6" id="-1">
+                <set-game-val-1 comment="false" x="26" y="40">
+                    <true comment="false" id="0" x="0" y="0"/>
+                </set-game-val-1>
+                <setanim comment="false" x="26" y="65">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="GongAnimation"/>
+                </setanim>
+                <play-sound4 comment="false" x="26" y="92">
+                    <int id="0" val="0"/>
+                    <sound eid="13" id="1"/>
+                </play-sound4>
+                <scene-change-through comment="false" x="26" y="119">
+                    <scene eid="1" id="0"/>
+                    <int id="1" val="0"/>
+                    <int id="2" val="1"/>
+                </scene-change-through>
+            </group>
+            <int id="0" val="GongAnimation"/>
+        </event-custom>
+    </group>
+    <group eventID="6" id="4">
+        <set-val-1-1 comment="false" x="759" y="86">
+            <int id="0" val=""/>
+        </set-val-1-1>
+    </group>
+    <group eventID="6" id="-1"/>
 </groups>

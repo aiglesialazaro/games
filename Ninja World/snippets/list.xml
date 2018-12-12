@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <pack>
     <snippet actorid="1" attachedevent="true" class="scripts.ActorEvents_1" classname="scripts.ActorEvents_1" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="1" name="ActorEvents_1" oid="-1" package="scripts." shared="false" type="actor">
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="SceneTransitioning" hidden="false" id="1" name="_SceneTransitioning" order="0"/>
         <blocks/>
         <events>
             <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
-            <event displayName="Actor - Type" enabled="true" id="2" name="event-collide-actortotype" order="3" repeats="true"/>
-            <event displayName="Updating" enabled="true" id="3" name="step" order="4" repeats="true"/>
-            <event displayName="Custom Event" enabled="true" id="4" name="event-custom" order="5" repeats="true"/>
-            <event displayName="Enters Region" enabled="true" id="5" name="event-actor-region" order="2" repeats="true"/>
+            <event displayName="Actor - Type" enabled="true" id="2" name="event-collide-actortotype" order="5" repeats="true"/>
+            <event displayName="Updating" enabled="true" id="3" name="step" order="6" repeats="true"/>
+            <event displayName="Custom Event" enabled="true" id="4" name="event-custom" order="7" repeats="true"/>
+            <event displayName="Custom Event" enabled="true" id="6" name="event-custom" order="4" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="true" class="scripts.SceneEvents_0" classname="scripts.SceneEvents_0" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="2" name="SceneEvents_0" oid="-1" package="scripts." sceneid="0" shared="false" type="scene">
@@ -16,7 +17,8 @@
         <blocks/>
         <events>
             <event displayName="Drawing" enabled="true" id="2" name="draw" order="2" repeats="true"/>
-            <event displayName="Created" enabled="true" id="3" name="init" order="3" repeats="true"/>
+            <event displayName="Created" enabled="true" id="3" name="init" order="4" repeats="true"/>
+            <event displayName="Enters Region" enabled="true" id="4" name="event-actor-region" order="3" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_3_3_4WayMovement" classname="scripts.Design_3_3_4WayMovement" desc="Allows the actor to move up, down, left and right." description="Allows the actor to move up, down, left and right." design="true" drawOrder="0" id="3" name="4 Way Movement" oid="-1" package="scripts" shared="false" type="actor">
@@ -100,8 +102,12 @@
         </events>
     </snippet>
     <snippet attachedevent="true" class="scripts.SceneEvents_1" classname="scripts.SceneEvents_1" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="6" name="SceneEvents_1" oid="-1" package="scripts." sceneid="1" shared="false" type="scene">
+        <image default="" defaultValue="" desc="" dropdown="" fullname="sushi" hidden="false" id="1" name="_sushi" order="0"/>
         <blocks/>
-        <events/>
+        <events>
+            <event displayName="Drawing" enabled="true" id="1" name="draw" order="1" repeats="true"/>
+            <event displayName="Created" enabled="true" id="2" name="init" order="2" repeats="true"/>
+        </events>
     </snippet>
     <snippet actorid="8" attachedevent="true" class="scripts.ActorEvents_8" classname="scripts.ActorEvents_8" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="7" name="ActorEvents_8" oid="-1" package="scripts." shared="false" type="actor">
         <blocks/>
