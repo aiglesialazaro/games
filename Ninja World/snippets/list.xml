@@ -17,8 +17,9 @@
         <blocks/>
         <events>
             <event displayName="Drawing" enabled="true" id="2" name="draw" order="2" repeats="true"/>
-            <event displayName="Created" enabled="true" id="3" name="init" order="4" repeats="true"/>
-            <event displayName="Enters Region" enabled="true" id="4" name="event-actor-region" order="3" repeats="true"/>
+            <event displayName="Created" enabled="true" id="3" name="init" order="5" repeats="true"/>
+            <event displayName="Enters Region" enabled="true" id="4" name="event-actor-region" order="4" repeats="true"/>
+            <event displayName="Created" enabled="true" id="5" name="init" order="3" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_3_3_4WayMovement" classname="scripts.Design_3_3_4WayMovement" desc="Allows the actor to move up, down, left and right." description="Allows the actor to move up, down, left and right." design="true" drawOrder="0" id="3" name="4 Way Movement" oid="-1" package="scripts" shared="false" type="actor">
@@ -106,11 +107,18 @@
         <blocks/>
         <events>
             <event displayName="Drawing" enabled="true" id="1" name="draw" order="1" repeats="true"/>
-            <event displayName="Created" enabled="true" id="2" name="init" order="2" repeats="true"/>
+            <event displayName="Created" enabled="true" id="2" name="init" order="3" repeats="true"/>
+            <event displayName="Created" enabled="true" id="3" name="init" order="2" repeats="true"/>
         </events>
     </snippet>
     <snippet actorid="8" attachedevent="true" class="scripts.ActorEvents_8" classname="scripts.ActorEvents_8" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="7" name="ActorEvents_8" oid="-1" package="scripts." shared="false" type="actor">
         <blocks/>
         <events/>
+    </snippet>
+    <snippet actorid="14" attachedevent="true" class="scripts.ActorEvents_14" classname="scripts.ActorEvents_14" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="8" name="ActorEvents_14" oid="-1" package="scripts." shared="false" type="actor">
+        <blocks/>
+        <events>
+            <event displayName="Custom Event" enabled="false" id="1" name="event-custom" order="1" repeats="true"/>
+        </events>
     </snippet>
 </pack>
