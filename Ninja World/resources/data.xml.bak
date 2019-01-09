@@ -2,6 +2,14 @@
 <pack>
     <background atlasID="0" desc="" durations="250,250" dx="-0.0" dy="-0.0" height="480" id="6" name="Background Lvl 1" numframes="2" oid="-1" repeats="true" resized="false" shared="false" width="3360" xpf="0.5" ypf="1.0"/>
     <background atlasID="0" desc="" durations="250,250" dx="-0.0" dy="-0.0" height="480" id="7" name="Background Lvl 2" numframes="2" oid="-1" repeats="false" resized="false" shared="false" width="3360" xpf="1.0" ypf="1.0"/>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="9" fixedrot="true" fric="0.2" gid="3" id="16" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="Enemy 1" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="17" static="false">
+        <snippets/>
+    </actor>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="82" id="17" name="Enemy 1" shared="false" width="84">
+        <anim across="3" down="2" durations="100,100,100,100,100" height="164" id="0" loop="true" name="Enemy Animation" numframes="5" originx="42" originy="41" sync="false" version="2" width="252">
+            <poly data="4,9,2,69,2,69,82,9,82" density="0.1" fric="0.2" gid="3" id="0" name="Animation 0" rest="0.0" sensor="false"/>
+        </anim>
+    </sprite>
     <tileset across="2" atlasID="0" desc="" down="6" id="12" name="Gong" oid="-1" shared="false" th="32" tw="32">
         <tile collision="-1" data="" durations="100" frames="0" id="0" order="-1"/>
         <tile collision="-1" data="" durations="100" frames="1" id="1" order="-1"/>
@@ -92,6 +100,9 @@
         </anim>
         <anim across="4" down="3" durations="83,83,83,83,83,83,83,83,83,83" height="288" id="7" loop="true" name="GongAnimation" numframes="10" originx="46" originy="48" sync="false" version="2" width="372">
             <poly data="4,42,0,72,0,72,96,42,96" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 2" rest="0.0" sensor="false"/>
+        </anim>
+        <anim across="4" down="4" durations="41,41,41,41,41,41,41,41,41,41,41,41,41" height="384" id="8" loop="true" name="Sword Animation" numframes="13" originx="46" originy="48" sync="false" version="2" width="372">
+            <poly data="4,0,0,93,0,93,96,0,96" density="0.1" fric="0.2" gid="-1000" id="0" name="Sword Animation" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
     <tileset across="14" atlasID="0" desc="" down="5" id="0" name="Snow" oid="-1" shared="false" th="32" tw="32">

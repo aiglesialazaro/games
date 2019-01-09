@@ -164,7 +164,7 @@
                     <sound eid="13" id="1"/>
                 </play-sound4>
                 <setanim comment="false" x="26" y="119">
-                    <ACTOR eid="lastcreated" id="0"/>
+                    <ACTOR eid="this" id="0"/>
                     <int id="1" val="Idle right"/>
                 </setanim>
                 <dolater comment="false" x="26" y="146">
