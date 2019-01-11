@@ -2,15 +2,23 @@
 <pack>
     <background atlasID="0" desc="" durations="250,250" dx="-0.0" dy="-0.0" height="480" id="6" name="Background Lvl 1" numframes="2" oid="-1" repeats="true" resized="false" shared="false" width="3360" xpf="0.5" ypf="1.0"/>
     <background atlasID="0" desc="" durations="250,250" dx="-0.0" dy="-0.0" height="480" id="7" name="Background Lvl 2" numframes="2" oid="-1" repeats="false" resized="false" shared="false" width="3360" xpf="1.0" ypf="1.0"/>
-    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="10" fixedrot="false" fric="0.2" gid="3" id="18" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="Bullet Enemy 2" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="19" static="false">
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="10" fixedrot="false" fric="0.2" gid="5" id="18" ignoreg="true" inertia="1.0" ldamp="0.0" mass="1.0" name="Bullet Enemy 2" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="19" static="false">
         <snippets/>
     </actor>
-    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="64" id="19" name="Bullet Enemy 2" shared="false" width="64">
-        <anim across="1" down="1" durations="100" height="64" id="0" loop="true" name="Bullet 1" numframes="1" originx="32" originy="32" sync="false" version="2" width="64">
-            <poly data="4,0,0,32,0,32,32,0,32" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="96" id="19" name="Bullet Enemy 2" shared="false" width="96">
+        <anim across="1" down="1" durations="100" height="96" id="0" loop="true" name="Bullet 1" numframes="1" originx="48" originy="48" sync="false" version="2" width="96">
+            <poly data="4,30,33,62,33,62,65,30,65" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="true"/>
         </anim>
         <anim across="3" down="2" durations="100,100,100,100,100,100" height="128" id="1" loop="true" name="Bullet Animation 1" numframes="6" originx="32" originy="32" sync="false" version="2" width="192">
             <poly data="4,0,0,64,0,64,64,0,64" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 1" rest="0.0" sensor="false"/>
+        </anim>
+    </sprite>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="14" fixedrot="false" fric="0.2" gid="3" id="24" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="Bullet Enemy 3" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="25" static="false">
+        <snippets/>
+    </actor>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="96" id="25" name="Bullet Enemy 3" shared="false" width="96">
+        <anim across="1" down="1" durations="100" height="96" id="0" loop="true" name="Animation 0" numframes="1" originx="48" originy="48" sync="false" version="2" width="96">
+            <poly data="4,0,0,96,0,96,96,0,96" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="9" fixedrot="true" fric="0.2" gid="3" id="16" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="Enemy 1" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="17" static="false">
@@ -19,6 +27,28 @@
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="82" id="17" name="Enemy 1" shared="false" width="84">
         <anim across="3" down="2" durations="100,100,100,100,100" height="164" id="0" loop="true" name="Enemy Animation" numframes="5" originx="42" originy="41" sync="false" version="2" width="252">
             <poly data="4,9,2,69,2,69,82,9,82" density="0.1" fric="0.2" gid="3" id="0" name="Animation 0" rest="0.0" sensor="false"/>
+        </anim>
+    </sprite>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="11" fixedrot="true" fric="0.2" gid="3" id="20" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="Enemy 2" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="21" static="false">
+        <snippets/>
+    </actor>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="12" fixedrot="false" fric="0.2" gid="3" id="22" ignoreg="true" inertia="1.0" ldamp="0.0" mass="1.0" name="Enemy 3" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="23" static="false">
+        <snippets/>
+    </actor>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="128" id="23" name="Enemy 3" shared="false" width="128">
+        <anim across="3" down="3" durations="100,100,100,100,100,100,100" height="384" id="0" loop="true" name="Animation 0" numframes="7" originx="64" originy="64" sync="false" version="2" width="384">
+            <poly data="4,0,0,128,0,128,128,0,128" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
+        </anim>
+        <anim across="1" down="1" durations="100" height="128" id="1" loop="true" name="Iddle Enemy" numframes="1" originx="64" originy="64" sync="false" version="0" width="128">
+            <poly data="4,0,0,128,0,128,128,0,128" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 1" rest="0.0" sensor="false"/>
+        </anim>
+    </sprite>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="64" id="21" name="Enemy1" shared="false" width="64">
+        <anim across="4" down="4" durations="200,200,200,200,200,200,200,200,400,400,400,400,400,400" height="256" id="0" loop="false" name="Enemy 3" numframes="14" originx="32" originy="32" sync="false" version="2" width="256">
+            <poly data="4,4,0,61,0,61,64,4,64" density="0.1" fric="0.2" gid="-1000" id="0" name="Enemy 3" rest="0.0" sensor="false"/>
+        </anim>
+        <anim across="1" down="1" durations="100" height="64" id="1" loop="true" name="Iddle" numframes="1" originx="32" originy="32" sync="false" version="2" width="64">
+            <poly data="4,3,0,60,0,60,64,3,64" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 1" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
     <tileset across="2" atlasID="0" desc="" down="6" id="12" name="Gong" oid="-1" shared="false" th="32" tw="32">
