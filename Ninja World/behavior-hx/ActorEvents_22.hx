@@ -69,44 +69,13 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_1 extends ActorScript
+class ActorEvents_22 extends ActorScript
 {
-	public var _SceneTransitioning:Bool;
-	
-	/* ========================= Custom Event ========================= */
-	public function _customEvent_GongAnimation():Void
-	{
-		Engine.engine.setGameAttribute("sceneTransitioning", true);
-		actor.setAnimation("" + "GongAnimation");
-		playSound(getSound(13));
-		actor.setAnimation("" + "Idle right");
-		runLater(1000 * 3, function(timeTask:TimedTask):Void
-		{
-			switchScene(GameModel.get().scenes.get(1).getID(), null, createCrossfadeTransition(1));
-		}, actor);
-	}
-	
-	/* ========================= Custom Event ========================= */
-	public function _customEvent_Death():Void
-	{
-		Engine.engine.setGameAttribute("Sushi lives", (Engine.engine.getGameAttribute("Sushi lives") - 1));
-		if((Engine.engine.getGameAttribute("Sushi lives") < 1))
-		{
-			switchScene(GameModel.get().scenes.get(0).getID(), createFadeOut(.5, Utils.getColorRGB(0,0,0)), createFadeIn(.5, Utils.getColorRGB(0,0,0)));
-			Engine.engine.setGameAttribute("Sushi lives", 1);
-		}
-		else
-		{
-			reloadCurrentScene(null, createCrossfadeTransition(1));
-		}
-	}
 	
 	
 	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
 		super(actor);
-		nameMap.set("SceneTransitioning", "_SceneTransitioning");
-		_SceneTransitioning = false;
 		
 	}
 	
@@ -114,30 +83,7 @@ class ActorEvents_1 extends ActorScript
 	{
 		
 		/* ======================== When Creating ========================= */
-		engine.cameraFollow(actor);
-		Engine.engine.setGameAttribute("sceneTransitioning", false);
-		
-		/* ======================== Actor of Type ========================= */
-		addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled && sameAsAny(getActorType(8), event.otherActor.getType(),event.otherActor.getGroup()))
-			{
-				Engine.engine.setGameAttribute("Sushi lives", (Engine.engine.getGameAttribute("Sushi lives") + 1));
-				recycleActor(event.otherActor);
-			}
-		});
-		
-		/* ======================== When Updating ========================= */
-		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled)
-			{
-				if((actor.getY() > getScreenHeight()))
-				{
-					_customEvent_Death();
-				}
-			}
-		});
+		actor.setAnimation("" + "Iddle Enemy");
 		
 	}
 	

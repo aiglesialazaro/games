@@ -64,26 +64,26 @@
         </image-to-text>
     </group>
     <group eventID="2" id="-1">
+        <image-copy comment="false" x="886" y="248">
+            <int id="0" val=""/>
+        </image-copy>
+        <image-inst-create comment="false" x="562" y="568">
+            <get-val-2-2 comment="false" id="0" x="0" y="0"/>
+        </image-inst-create>
+        <image-actor comment="false" x="715" y="318">
+            <ACTOR eid="2" id="0"/>
+        </image-actor>
+        <image-actor comment="false" x="847" y="414">
+            <ACTOR eid="2" id="0"/>
+        </image-actor>
+        <image-copy comment="false" x="1012" y="201">
+            <int id="0" val=""/>
+        </image-copy>
         <str-trim comment="false" x="843" y="508">
             <image-to-text comment="false" id="0" x="0" y="0">
                 <int id="0" val=""/>
             </image-to-text>
         </str-trim>
-        <image-copy comment="false" x="1012" y="201">
-            <int id="0" val=""/>
-        </image-copy>
-        <image-actor comment="false" x="847" y="414">
-            <ACTOR eid="2" id="0"/>
-        </image-actor>
-        <image-actor comment="false" x="715" y="318">
-            <ACTOR eid="2" id="0"/>
-        </image-actor>
-        <image-inst-create comment="false" x="562" y="568">
-            <get-val-2-2 comment="false" id="0" x="0" y="0"/>
-        </image-inst-create>
-        <image-copy comment="false" x="886" y="248">
-            <int id="0" val=""/>
-        </image-copy>
     </group>
     <group eventID="3" id="0">
         <init comment="false" x="15" y="15">

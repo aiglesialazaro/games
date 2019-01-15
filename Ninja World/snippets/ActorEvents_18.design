@@ -1,12 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <groups>
     <group eventID="1" id="0">
-        <event-collide-actortotype comment="false" x="15" y="15">
+        <event-collide-actortotype comment="false" x="32" y="24">
             <group eventID="1" id="-1">
-                <setanim comment="false" x="26" y="47">
+                <setanim comment="false" x="43" y="56">
                     <ACTOR eid="this" id="0"/>
-                    <int id="1" val="Bullet Animation"/>
+                    <int id="1" val="Bullet Animation 1"/>
                 </setanim>
+                <shout comment="false" x="43" y="83">
+                    <collide-actor-of-type comment="false" id="0" x="0" y="0"/>
+                    <int id="1" val="Damage"/>
+                </shout>
+                <set-dxy comment="false" x="43" y="115">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="0"/>
+                    <int id="2" val=".4"/>
+                </set-dxy>
+                <dolater comment="false" x="43" y="142">
+                    <group eventID="1" id="-1">
+                        <die comment="false" x="54" y="169">
+                            <ACTOR eid="this" id="0"/>
+                        </die>
+                    </group>
+                    <int id="0" val=".6"/>
+                    <ACTOR eid="this" id="2"/>
+                </dolater>
             </group>
             <ACTOR eid="this" id="0"/>
             <actortype eid="1" id="1"/>
