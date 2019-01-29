@@ -71,11 +71,14 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 class ActorEvents_22 extends ActorScript
 {
+	public var _Yposition:Float;
 	
 	
 	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
 		super(actor);
+		nameMap.set("Y position", "_Yposition");
+		_Yposition = 0.0;
 		
 	}
 	
@@ -83,7 +86,39 @@ class ActorEvents_22 extends ActorScript
 	{
 		
 		/* ======================== When Creating ========================= */
-		actor.setAnimation("" + "Iddle Enemy");
+		actor.setAnimation("" + "Idle Enemy");
+		
+		/* ======================= Every N seconds ======================== */
+		runPeriodically(1000 * 5.5, function(timeTask:TimedTask):Void
+		{
+			if(wrapper.enabled)
+			{
+				actor.setAnimation("" + "Animation 0");
+				runLater(1000 * 5, function(timeTask:TimedTask):Void
+				{
+					createRecycledActor(getActorType(24), actor.getX(), actor.getY(), Script.FRONT);
+					getLastCreatedActor().applyImpulse(0, 1, 24);
+					actor.setAnimation("" + "Idle Enemy");
+				}, actor);
+			}
+		}, actor);
+		
+		/* ======================== When Updating ========================= */
+		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled)
+			{
+				actor.makeAlwaysSimulate();
+				if((actor.getX() == Engine.engine.getGameAttribute("Hero X")))
+				{
+					actor.setXVelocity(0);
+				}
+				else
+				{
+					actor.applyImpulse((Engine.engine.getGameAttribute("Hero X") - actor.getX()), 0, 90);
+				}
+			}
+		});
 		
 	}
 	

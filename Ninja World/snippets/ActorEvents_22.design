@@ -5,10 +5,117 @@
             <group eventID="1" id="-1">
                 <setanim comment="false" x="26" y="40">
                     <ACTOR eid="this" id="0"/>
-                    <int id="1" val="Iddle Enemy"/>
+                    <int id="1" val="Idle Enemy"/>
                 </setanim>
             </group>
         </init>
     </group>
     <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <event-periodic comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <setanim comment="false" x="26" y="42">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="Animation 0"/>
+                </setanim>
+                <dolater comment="false" x="26" y="69">
+                    <group eventID="2" id="-1">
+                        <create-actor3 comment="false" x="37" y="96">
+                            <actortype eid="24" id="0"/>
+                            <get-xy comment="false" id="1" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <int id="1" val="0"/>
+                            </get-xy>
+                            <get-xy comment="false" id="2" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <int id="1" val="1"/>
+                            </get-xy>
+                            <int id="3" val="0"/>
+                        </create-actor3>
+                        <push-shove comment="false" x="37" y="136">
+                            <ACTOR eid="lastcreated" id="0"/>
+                            <int id="1" val="1"/>
+                            <int id="2" val="0"/>
+                            <int id="3" val="1"/>
+                            <int id="4" val="24"/>
+                        </push-shove>
+                        <setanim comment="false" x="37" y="163">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="Idle Enemy"/>
+                        </setanim>
+                    </group>
+                    <int id="0" val="5"/>
+                    <ACTOR eid="this" id="2"/>
+                </dolater>
+            </group>
+            <int id="0" val="5.5"/>
+            <ACTOR eid="this" id="2"/>
+        </event-periodic>
+    </group>
+    <group eventID="2" id="1">
+        <get-xy comment="false" x="763" y="313">
+            <ACTOR eid="lastcollided" id="0"/>
+            <int id="1" val="1"/>
+        </get-xy>
+    </group>
+    <group eventID="2" id="2">
+        <push-shove2 comment="false" x="1107" y="83">
+            <ACTOR eid="this" id="0"/>
+            <int id="1" val="1"/>
+            <int id="2" val=""/>
+            <int id="3" val=""/>
+        </push-shove2>
+    </group>
+    <group eventID="2" id="3">
+        <push-shove2 comment="false" x="819" y="208">
+            <ACTOR eid="this" id="0"/>
+            <int id="1" val="1"/>
+            <int id="2" val=""/>
+            <int id="3" val="10"/>
+        </push-shove2>
+    </group>
+    <group eventID="2" id="-1"/>
+    <group eventID="3" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="3" id="-1">
+                <ignore-screen-tolerance comment="false" x="26" y="40">
+                    <ACTOR eid="this" id="0"/>
+                </ignore-screen-tolerance>
+                <if comment="false" x="26" y="67">
+                    <group eventID="3" id="-1">
+                        <set-dxy comment="false" x="37" y="105">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="0"/>
+                            <int id="2" val="0"/>
+                        </set-dxy>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <get-xy comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="0"/>
+                        </get-xy>
+                        <get-game-val-3 comment="false" id="1" x="0" y="0"/>
+                    </eq>
+                </if>
+                <else comment="false" x="26" y="144">
+                    <group eventID="3" id="-1">
+                        <push-shove comment="false" x="37" y="164">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="1"/>
+                            <minus comment="false" id="2" x="0" y="0">
+                                <get-game-val-3 comment="false" id="0" x="0" y="0"/>
+                                <get-xy comment="false" id="1" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="0"/>
+                                </get-xy>
+                            </minus>
+                            <int id="3" val="0"/>
+                            <int id="4" val="90"/>
+                        </push-shove>
+                    </group>
+                </else>
+            </group>
+        </step>
+    </group>
+    <group eventID="3" id="-1"/>
 </groups>

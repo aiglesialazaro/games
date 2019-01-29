@@ -40,6 +40,7 @@ import box2D.common.math.B2Vec2;
 import box2D.dynamics.B2Body;
 import box2D.dynamics.B2Fixture;
 import box2D.dynamics.joints.B2Joint;
+import box2D.collision.shapes.B2Shape;
 
 import motion.Actuate;
 import motion.easing.Back;
@@ -69,13 +70,21 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_16 extends ActorScript
+class SceneEvents_0 extends SceneScript
 {
+	public var _Sushilives:Float;
+	public var _sushi:BitmapData;
+	public var _IsInvencible:Bool;
 	
 	
-	public function new(dummy:Int, actor:Actor, dummy2:Engine)
+	public function new(dummy:Int, dummy2:Engine)
 	{
-		super(actor);
+		super();
+		nameMap.set("Sushi lives", "_Sushilives");
+		_Sushilives = 1.0;
+		nameMap.set("sushi", "_sushi");
+		nameMap.set("Is Invencible", "_IsInvencible");
+		_IsInvencible = false;
 		
 	}
 	
@@ -83,7 +92,36 @@ class ActorEvents_16 extends ActorScript
 	{
 		
 		/* ======================== When Creating ========================= */
+		_sushi = getImageForActor(getActor(2));
+		propertyChanged("_sushi", _sushi);
 		
+		/* ========================= When Drawing ========================= */
+		addWhenDrawingListener(null, function(g:G, x:Float, y:Float, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled)
+			{
+				g.drawString("" + Engine.engine.getGameAttribute("Sushi lives"), 27, 38);
+				g.drawString("" + "x", 6, 38);
+				attachImageToHUD(new BitmapWrapper(new Bitmap(_sushi)), Std.int(0), Std.int(38));
+			}
+		});
+		
+		/* ======================== Specific Actor ======================== */
+		addActorEntersRegionListener(getRegion(0), function(a:Actor, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && sameAs(getActor(1), a))
+			{
+				_IsInvencible = true;
+				propertyChanged("_IsInvencible", _IsInvencible);
+				if(!(Engine.engine.getGameAttribute("sceneTransitioning")))
+				{
+					getActor(1).shout("_customEvent_" + "GongAnimation");
+					createRecycledActor(getActorType(14), 3222, 178, Script.FRONT);
+					_IsInvencible = false;
+					propertyChanged("_IsInvencible", _IsInvencible);
+				}
+			}
+		});
 		
 	}
 	

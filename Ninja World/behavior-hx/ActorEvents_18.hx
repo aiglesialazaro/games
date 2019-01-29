@@ -40,7 +40,6 @@ import box2D.common.math.B2Vec2;
 import box2D.dynamics.B2Body;
 import box2D.dynamics.B2Fixture;
 import box2D.dynamics.joints.B2Joint;
-import box2D.collision.shapes.B2Shape;
 
 import motion.Actuate;
 import motion.easing.Back;
@@ -70,33 +69,31 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class SceneEvents_1 extends SceneScript
+class ActorEvents_18 extends ActorScript
 {
-	public var _sushi:BitmapData;
 	
 	
-	public function new(dummy:Int, dummy2:Engine)
+	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
-		super();
-		nameMap.set("sushi", "_sushi");
+		super(actor);
 		
 	}
 	
 	override public function init()
 	{
 		
-		/* ======================== When Creating ========================= */
-		_sushi = getImageForActor(getActor(2));
-		propertyChanged("_sushi", _sushi);
-		
-		/* ========================= When Drawing ========================= */
-		addWhenDrawingListener(null, function(g:G, x:Float, y:Float, list:Array<Dynamic>):Void
+		/* ======================== Actor of Type ========================= */
+		addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void
 		{
-			if(wrapper.enabled)
+			if(wrapper.enabled && sameAsAny(getActorType(1), event.otherActor.getType(),event.otherActor.getGroup()))
 			{
-				g.drawString("" + Engine.engine.getGameAttribute("Sushi lives"), 27, 38);
-				g.drawString("" + "x", 6, 38);
-				attachImageToHUD(new BitmapWrapper(new Bitmap(_sushi)), Std.int(0), Std.int(38));
+				actor.setAnimation("" + "Bullet Animation 1");
+				event.otherActor.shout("_customEvent_" + "Damage");
+				actor.setXVelocity(.4);
+				runLater(1000 * .6, function(timeTask:TimedTask):Void
+				{
+					recycleActor(actor);
+				}, actor);
 			}
 		});
 		

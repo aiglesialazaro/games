@@ -54,6 +54,7 @@
     <groups>
         <group desc="" id="4" name="Ninja"/>
         <group desc="" id="5" name="Enemy Bullet"/>
+        <group desc="" id="6" name="Enemy 2"/>
     </groups>
     <cgroups>
         <cgroup g1="0" g2="1"/>
@@ -61,10 +62,12 @@
         <cgroup g1="0" g2="4"/>
         <cgroup g1="1" g2="3"/>
         <cgroup g1="1" g2="4"/>
+        <cgroup g1="1" g2="6"/>
         <cgroup g1="3" g2="3"/>
         <cgroup g1="3" g2="4"/>
         <cgroup g1="4" g2="4"/>
         <cgroup g1="4" g2="5"/>
+        <cgroup g1="4" g2="6"/>
     </cgroups>
     <input>
         <key id="0" keyname="UP" name="up" vk="38" vks="38"/>
@@ -74,6 +77,7 @@
         <key id="4" keyname="SPACE" name="action1" vk="32" vks="32"/>
         <key id="5" keyname="X" name="action2" vk="88" vks="88"/>
         <key id="6" keyname="ENTER" name="enter" vk="10" vks="10"/>
+        <key id="7" keyname="SHIFT" name="Sword" vk="16" vks="16"/>
     </input>
     <attcats>
         <cat id="-1" name="Default"/>
@@ -81,6 +85,8 @@
     <props/>
     <attributes>
         <number cid="-1" id="0" name="Sushi lives" save="true" value="1.0"/>
+        <number cid="-1" id="2" name="Hero Y" save="true" value="0.0"/>
+        <number cid="-1" id="3" name="Hero X" save="true" value="0.0"/>
         <boolean cid="-1" id="1" name="sceneTransitioning" save="true" value="false"/>
     </attributes>
     <collisions>
@@ -112,7 +118,7 @@
     </collisions>
     <autotileFormats/>
     <atlases>
-        <atlas allScenes="true" desc="" dirty="true" id="0" members="0,1,5,6,7,8,12,13,14,16,18,20,22,24," name="Main Atlas" pvr="false" resize="0" target="0"/>
+        <atlas allScenes="true" desc="" dirty="true" id="0" members="0,1,5,6,7,8,12,13,14,16,18,20,22,24,26," name="Main Atlas" pvr="false" resize="0" target="0"/>
         <atlas allScenes="true" desc="" dirty="true" id="1" members="" name="Atlas 2" pvr="false" resize="0" target="0"/>
         <atlas allScenes="true" desc="" dirty="true" id="2" members="" name="Atlas 3" pvr="false" resize="0" target="0"/>
         <atlas allScenes="true" desc="" dirty="true" id="3" members="" name="Atlas 4" pvr="false" resize="0" target="0"/>
