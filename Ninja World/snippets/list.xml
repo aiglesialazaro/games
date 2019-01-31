@@ -6,14 +6,14 @@
         <blocks/>
         <events>
             <event displayName="Camera" enabled="true" id="1" name="init" order="1" repeats="true"/>
-            <event displayName="Sushi" enabled="true" id="2" name="event-collide-actortotype" order="13" repeats="true"/>
-            <event displayName="Die in Pit" enabled="true" id="3" name="step" order="14" repeats="false"/>
-            <event displayName="Death" enabled="true" id="4" name="event-custom" order="15" repeats="true"/>
+            <event displayName="Sushi" enabled="true" id="2" name="event-collide-actortotype" order="15" repeats="true"/>
+            <event displayName="Die in Pit" enabled="true" id="3" name="step" order="16" repeats="false"/>
+            <event displayName="Death" enabled="true" id="4" name="event-custom" order="17" repeats="true"/>
             <event displayName="Gong" enabled="true" id="6" name="event-custom" order="9" repeats="true"/>
             <event displayName="Damage" enabled="true" id="7" name="event-custom" order="4" repeats="true"/>
-            <event displayName="Sword" enabled="true" id="8" name="step" order="10" repeats="true"/>
             <event displayName="Updating" enabled="true" id="9" name="step" order="11" repeats="true"/>
-            <event displayName="Updating" enabled="true" id="10" name="step" order="12" repeats="true"/>
+            <event displayName="Updating" enabled="true" id="10" name="step" order="13" repeats="true"/>
+            <event displayName="Keyboard" enabled="true" id="11" name="event-key-press-release" order="12" repeats="false"/>
         </events>
     </snippet>
     <snippet attachedevent="true" class="scripts.SceneEvents_0" classname="scripts.SceneEvents_0" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="2" name="SceneEvents_0" oid="-1" package="scripts." sceneid="0" shared="false" type="scene">
@@ -23,8 +23,9 @@
         <blocks/>
         <events>
             <event displayName="Drawing" enabled="true" id="2" name="draw" order="2" repeats="true"/>
-            <event displayName="Created" enabled="true" id="3" name="init" order="5" repeats="true"/>
+            <event displayName="Created" enabled="true" id="3" name="init" order="6" repeats="true"/>
             <event displayName="Enters Region" enabled="true" id="4" name="event-actor-region" order="4" repeats="true"/>
+            <event displayName="Enters Region" enabled="true" id="5" name="event-actor-region" order="5" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_4_4_JumpandRunMovement" classname="scripts.Design_4_4_JumpandRunMovement" desc="Allows the actor to run and jump while on the ground." description="Allows the actor to run and jump while on the ground." design="true" drawOrder="0" id="4" name="Jump and Run Movement" oid="-1" package="scripts" shared="false" type="actor">

@@ -87,7 +87,9 @@
         <number cid="-1" id="0" name="Sushi lives" save="true" value="1.0"/>
         <number cid="-1" id="2" name="Hero Y" save="true" value="0.0"/>
         <number cid="-1" id="3" name="Hero X" save="true" value="0.0"/>
+        <boolean cid="-1" id="5" name="Face Right" save="true" value="false"/>
         <boolean cid="-1" id="1" name="sceneTransitioning" save="true" value="false"/>
+        <boolean cid="-1" id="4" name="Is swinging sword" save="true" value="false"/>
     </attributes>
     <collisions>
         <poly id="0" name="Square" pts="0.0,0.0#0.0,1.0#1.0,1.0#1.0,0.0"/>

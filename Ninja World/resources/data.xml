@@ -159,8 +159,11 @@
         <anim across="4" down="3" durations="83,83,83,83,83,83,83,83,83,83" height="288" id="7" loop="true" name="GongAnimation" numframes="10" originx="46" originy="48" sync="false" version="2" width="372">
             <poly data="4,42,0,72,0,72,96,42,96" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 2" rest="0.0" sensor="false"/>
         </anim>
-        <anim across="4" down="4" durations="41,41,41,41,41,41,41,41,41,41,41,41,41" height="384" id="8" loop="true" name="Sword Animation" numframes="13" originx="46" originy="48" sync="false" version="2" width="372">
+        <anim across="4" down="4" durations="41,41,41,41,41,41,41,41,41,41,41,41,41" height="384" id="8" loop="true" name="Sword Animation left" numframes="13" originx="46" originy="48" sync="false" version="2" width="372">
             <poly data="4,0,0,93,0,93,96,0,96" density="0.1" fric="0.2" gid="-1000" id="0" name="Sword Animation" rest="0.0" sensor="false"/>
+        </anim>
+        <anim across="4" down="4" durations="41,41,41,41,41,41,41,41,41,41,41,41,41" height="384" id="9" loop="true" name="Sword Animation right" numframes="13" originx="46" originy="48" sync="false" version="2" width="372">
+            <poly data="4,0,0,93,0,93,96,0,96" density="0.1" fric="0.2" gid="-1000" id="0" name="Sword Animation right" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
     <tileset across="14" atlasID="0" desc="" down="5" id="0" name="Snow" oid="-1" shared="false" th="32" tw="32">
