@@ -145,4 +145,12 @@
         </event-actor-region>
     </group>
     <group eventID="5" id="-1"/>
+    <group eventID="6" id="0">
+        <event-key-press-release comment="false" x="31" y="35">
+            <group eventID="6" id="-1"/>
+            <control eid="7" id="0"/>
+            <int id="1" val="0"/>
+        </event-key-press-release>
+    </group>
+    <group eventID="6" id="-1"/>
 </groups>

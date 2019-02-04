@@ -287,7 +287,7 @@
                             <false comment="false" id="0" x="0" y="0"/>
                         </set-game-val-4>
                     </group>
-                    <int id="0" val=".533"/>
+                    <int id="0" val=".69"/>
                     <ACTOR eid="this" id="2"/>
                 </dolater>
             </group>
