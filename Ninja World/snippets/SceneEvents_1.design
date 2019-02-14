@@ -20,6 +20,11 @@
                     <int id="1" val="0"/>
                     <int id="2" val="38"/>
                 </image-inst-hud>
+                <draw-text comment="false" x="26" y="115">
+                    <get-game-val-6 comment="false" id="0" x="0" y="0"/>
+                    <int id="1" val="200"/>
+                    <int id="2" val="200"/>
+                </draw-text>
             </group>
         </draw>
     </group>
